@@ -1,7 +1,6 @@
 package com.canyonmodded.server.level.util;
 
 import com.google.common.base.Preconditions;
-import io.netty.buffer.ByteBuf;
 
 // Borrowed from Voxelwind (lol)
 public class NibbleArray {

@@ -1,0 +1,8 @@
+plugins {
+    id 'java'
+}
+
+dependencies {
+    compile "com.google.guava:guava:${guavaVersion}"
+    compile 'com.flowpowered:flow-math:1.0.3'
+}

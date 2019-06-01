@@ -1,2 +1,6 @@
 rootProject.name = 'canyon'
+include 'api'
+findProject(':api')?.name = 'canyon-api'
+include 'server'
+findProject(':server')?.name = 'canyon-server'
 

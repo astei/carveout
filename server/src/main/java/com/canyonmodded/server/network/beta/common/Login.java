@@ -1,7 +1,7 @@
 package com.canyonmodded.server.network.beta.common;
 
-import com.canyonmodded.server.network.MinecraftBetaBuffer;
 import com.canyonmodded.server.network.MinecraftPacket;
+import com.canyonmodded.server.network.MinecraftBetaBuffer;
 import com.canyonmodded.server.network.beta.handler.MinecraftBetaSessionHandler;
 
 public class Login implements MinecraftPacket {

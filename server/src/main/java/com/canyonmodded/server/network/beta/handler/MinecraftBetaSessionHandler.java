@@ -4,6 +4,7 @@ import com.canyonmodded.server.network.beta.common.Disconnect;
 import com.canyonmodded.server.network.beta.common.Handshake;
 import com.canyonmodded.server.network.beta.common.Login;
 import com.canyonmodded.server.network.beta.v1_7.*;
+import com.canyonmodded.server.network.beta.v1_7.*;
 
 public interface MinecraftBetaSessionHandler {
     default void activated() {

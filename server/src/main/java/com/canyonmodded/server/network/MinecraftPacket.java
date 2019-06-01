@@ -1,5 +1,6 @@
 package com.canyonmodded.server.network;
 
+import com.canyonmodded.server.network.beta.MinecraftBetaDecoder;
 import com.canyonmodded.server.network.beta.handler.MinecraftBetaSessionHandler;
 
 public interface MinecraftPacket {
@@ -10,7 +11,7 @@ public interface MinecraftPacket {
 
     /**
      * Attempts to give a "best-effort" guess for how large the incoming packet will be. This assists the
-     * {@link com.canyonmodded.server.network.beta.MinecraftBetaDecoder} in framing the data correctly.
+     * {@link MinecraftBetaDecoder} in framing the data correctly.
      * @return a best guess as to how large this packet will be, or -1 if one can't be made
      */
     default int guessPacketLength() {

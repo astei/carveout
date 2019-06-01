@@ -1,0 +1,13 @@
+plugins {
+    id 'java'
+}
+
+dependencies {
+    compile project(':canyon-api')
+    compile "io.netty:netty-codec:${nettyVersion}"
+    compile "io.netty:netty-handler:${nettyVersion}"
+    compile "org.apache.logging.log4j:log4j-api:${log4jVersion}"
+    compile "org.apache.logging.log4j:log4j-core:${log4jVersion}"
+    compile "org.apache.logging.log4j:log4j-slf4j-impl:${log4jVersion}"
+    compile "org.apache.logging.log4j:log4j-iostreams:${log4jVersion}"
+}
