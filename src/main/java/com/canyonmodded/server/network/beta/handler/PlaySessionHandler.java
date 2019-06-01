@@ -29,18 +29,18 @@ public class PlaySessionHandler implements MinecraftBetaSessionHandler {
         connection.delayedWrite(new SpawnPosition(0, 65, 0));
         //connection.delayedWrite(new PlayerPositionLook(0, 65, 65 + 1.62, 0, 0, 0, false));
 
-        List<CanyonChunk> fuck = new ArrayList<>();
+        List<CanyonChunk> testChunks = new ArrayList<>();
 
         for (int x = -7; x <= 7; x++) {
             for (int z = -7; z <= 7; z++) {
                 CanyonChunk cc = new CanyonChunk(x, z);
                 cc.makeFakeChunk();
-                fuck.add(cc);
+                testChunks.add(cc);
             }
         }
-        fuck.sort(new ChunkAroundComparator());
+        testChunks.sort(new ChunkAroundComparator());
 
-        for (CanyonChunk chunk : fuck) {
+        for (CanyonChunk chunk : testChunks) {
             connection.delayedWrite(new PreChunk(chunk.getX(), chunk.getZ(), true));
             connection.delayedWrite(chunk.createChunkPacket());
         }
@@ -61,11 +61,6 @@ public class PlaySessionHandler implements MinecraftBetaSessionHandler {
         if (pingTask != null) {
             pingTask.cancel(false);
         }
-    }
-
-    @Override
-    public void handle(KeepAlive keepAlive) {
-        System.out.println("Got keep-alive from client. Ping: " + (System.currentTimeMillis() - lastKeepAlive) + "ms.");
     }
 
     @Override
