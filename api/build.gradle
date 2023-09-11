@@ -3,6 +3,6 @@ plugins {
 }
 
 dependencies {
-    compile "com.google.guava:guava:${guavaVersion}"
-    compile 'com.flowpowered:flow-math:1.0.3'
+    implementation("com.google.guava:guava:${guavaVersion}")
+    implementation("org.spongepowered:math:2.0.1")
 }

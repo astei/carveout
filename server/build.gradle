@@ -3,11 +3,15 @@ plugins {
 }
 
 dependencies {
-    compile project(':canyon-api')
-    compile "io.netty:netty-codec:${nettyVersion}"
-    compile "io.netty:netty-handler:${nettyVersion}"
-    compile "org.apache.logging.log4j:log4j-api:${log4jVersion}"
-    compile "org.apache.logging.log4j:log4j-core:${log4jVersion}"
-    compile "org.apache.logging.log4j:log4j-slf4j-impl:${log4jVersion}"
-    compile "org.apache.logging.log4j:log4j-iostreams:${log4jVersion}"
+    implementation(project(":carveout-api"))
+    implementation("io.netty:netty-codec:${nettyVersion}")
+    implementation("io.netty:netty-handler:${nettyVersion}")
+    implementation("org.apache.logging.log4j:log4j-api:${log4jVersion}")
+    implementation("org.apache.logging.log4j:log4j-core:${log4jVersion}")
+    implementation("org.apache.logging.log4j:log4j-slf4j-impl:${log4jVersion}")
+    implementation("org.apache.logging.log4j:log4j-iostreams:${log4jVersion}")
+
+    // TODO: fix this!! this should be included from the api dependency but *shrug*
+    implementation("com.google.guava:guava:${guavaVersion}")
+    implementation("org.spongepowered:math:2.0.1")
 }

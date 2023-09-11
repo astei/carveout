@@ -1,6 +1,6 @@
-rootProject.name = 'canyon'
+rootProject.name = 'carveout'
 include 'api'
-findProject(':api')?.name = 'canyon-api'
+findProject(':api')?.name = 'carveout-api'
 include 'server'
-findProject(':server')?.name = 'canyon-server'
+findProject(':server')?.name = 'carveout-server'
 

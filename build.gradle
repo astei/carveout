@@ -6,7 +6,7 @@ allprojects {
     group 'me.steinborn'
     version '1.0-SNAPSHOT'
 
-    sourceCompatibility = 1.8
+    sourceCompatibility = 17
 
     repositories {
         mavenCentral()
@@ -16,9 +16,9 @@ allprojects {
         // dependency versions
         junitVersion = '5.3.0-M1'
         slf4jVersion = '1.7.25'
-        log4jVersion = '2.11.2'
-        nettyVersion = '4.1.36.Final'
-        guavaVersion = '25.1-jre'
+        log4jVersion = '2.20.0'
+        nettyVersion = '4.1.97.Final'
+        guavaVersion = '32.1.2-jre'
         checkerFrameworkVersion = '2.7.0'
 
         getCurrentShortRevision = {
@@ -35,6 +35,6 @@ allprojects {
 }
 
 dependencies {
-    testCompile "org.junit.jupiter:junit-jupiter-api:${junitVersion}"
-    testCompile "org.junit.jupiter:junit-jupiter-engine:${junitVersion}"
+    testRuntimeOnly "org.junit.jupiter:junit-jupiter-api:${junitVersion}"
+    testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:${junitVersion}"
 }
